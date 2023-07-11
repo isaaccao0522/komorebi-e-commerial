@@ -1,3 +1,4 @@
+import {ReactNode} from "react";
 import clsx from "clsx";
 
 type Variant =
@@ -38,7 +39,7 @@ const variants: Record<Variant, string> = {
 };
 
 type TextProps = {
-  children: React.ReactNode | React.ReactNode[];
+  children: ReactNode | ReactNode[];
   variant: Variant;
   className?: string;
 };
