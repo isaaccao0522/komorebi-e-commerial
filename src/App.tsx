@@ -4,12 +4,11 @@ import Inspx from "inspx";
 //Others
 import Text from "./components/text";
 import Button from "./components/button";
+import Icon from "./components/icon";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
 function App() {
-
-
   return (
     <div className="App">
       <Inspx>
@@ -20,9 +19,11 @@ function App() {
         <Button size="large" className="">
           Proccess to Quit
         </Button>
-        <Button size="small" className="mx-1 border-4 border-rose-500"  disabled>
+        <Button size="small" disabled className="mx-1">
           Payment
         </Button>
+        <Icon name="Arrow-Down-Icon" />
+        <Icon name="Plus-Icon" />
       </Inspx>
     </div>
   );

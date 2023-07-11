@@ -27,7 +27,7 @@ const Button = ({
       className={clsx(
         sizes[size],
         {
-          "bg-silver hover: bg-silver hover:text-white cursor-not-allowed":
+          "bg-silver hover:bg-silver hover:text-white cursor-not-allowed":
             disabled,
         },
         className
