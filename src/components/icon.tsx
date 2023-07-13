@@ -40,7 +40,7 @@ const Icons: IconsType = {
 };
 
 type IconProps = {
-  name: keyof typeof Icons
+  name: keyof typeof Icons,
 }
 
 const Icon = ({ name}: IconProps) => {

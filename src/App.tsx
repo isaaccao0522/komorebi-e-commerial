@@ -1,32 +1,40 @@
 import { useState } from "react";
-import Inspx from "inspx";
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-//Others
-import Text from "./components/text";
-import Button from "./components/button";
-import Icon from "./components/icon";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+//Pages
+import Root from "./route/root";
+import Home from "./pages/Home";
+import Cart from './pages/Cart';
+import Shop from './pages/Shop';
+import About from './pages/About';
+
+const router = createBrowserRouter ([
+  {
+    path: '/',
+    element: <Root />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },   
+      {
+        path: '/shop',
+        element: <Shop />
+      },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
+      }
+    ]
+  }
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <Inspx>
-        <div className="text-3x1 text-pink-400">App</div>
-        <Text variant="heading-one">Customer reusable components</Text>
-        <Text variant="body-one">Customer reusable components</Text>
-        <Text variant="caption-two">Customer reusable components</Text>
-        <Button size="large" className="">
-          Proccess to Quit
-        </Button>
-        <Button size="small" disabled className="mx-1">
-          Payment
-        </Button>
-        <Icon name="Arrow-Down-Icon" />
-        <Icon name="Plus-Icon" />
-      </Inspx>
-    </div>
-  );
+    return <RouterProvider router={ router} />
 }
 
 export default App;

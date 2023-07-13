@@ -1,0 +1,33 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+//Others
+import Text from "./text";
+import Icon from "./icon";
+
+
+const Header = () => {
+  return (
+    <header className="bg-[#f5f5f5] backdrop-blur-[10px] my-[18px] mx-[50px] p-[22px] flex justify-between items-center rounded-[26px]">
+      <Link to="/">
+        JXF
+      </Link>
+      <div className="flex flex-row items-center gap-[38px]">
+        <Link to="/shop">
+          <Text variant="caption-one">Shop</Text>
+        </Link>
+        <Link to="/about">
+          <Text variant="caption-one">About</Text>
+        </Link>
+        <Link to="cart" className="relative">
+          <Icon name="Cart-Icon" />
+          <span className="bg-blue-500  w-[25px] h-[25px] text-white rounded-full absolute -right-4 -top-4">
+            10
+          </span>
+        </Link>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
