@@ -6,6 +6,7 @@ import Axios from "axios";
 import Button from "../components/button";
 import Icon from "../components/icon";
 import Text from "../components/text";
+import { api} from '../api/axios';
 // import axios from "../api/axios";
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
 
   const getProducts = async () => {
     try {
-      const res = await Axios.get("http://localhost:5000/products");
+      const res = await Axios.get(`${api}/products`);
       console.log(res);
       setProducts(res.data);
     } catch (error) {
@@ -29,7 +30,7 @@ const Home = () => {
   }, []);
 
   const navigateToShop = () => {
-    navigate("/shop");
+    navigate('/shop');
   };
 
   return (
