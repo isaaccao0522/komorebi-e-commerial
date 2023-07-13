@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="bg-[#f5f5f5] backdrop-blur-[10px] my-[18px] mx-[50px] p-[22px] flex justify-between items-center rounded-[26px]">
       <Link to="/">
-        JXF
+        <Text variant="heading-four" className="text-red">JXF</Text>
       </Link>
       <div className="flex flex-row items-center gap-[38px]">
         <Link to="/shop">
