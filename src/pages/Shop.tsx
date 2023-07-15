@@ -57,6 +57,8 @@ const Shop = () => {
                   <div>
                     <img
                       src={product.image}
+                      width={368}
+                      height={368}
                       className="w-[368px] h-[368px]"
                       alt={product.name}
                     />

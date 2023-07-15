@@ -97,7 +97,9 @@ const Home = () => {
 
       <section className="mt-[82px] mb-[100px] relative">
         <img src="https://res.cloudinary.com/dbspz5tmg/image/upload/v1679834660/youtube/2023/march/komorebi-development/young-person-wearing-hoodie-mockup_2_1_jnlzke.png" 
-        className="h-[768px] w-full aspect-[1.6] object-cover"
+        w-full
+        h-full
+        className="h-full w-full aspect-[1.6] object-cover"
         alt="learn-more-image" />
         <Button className="absolute bottom-20 left-[45%]">
           <span className="flex gap-2">

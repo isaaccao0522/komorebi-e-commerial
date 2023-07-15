@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 import clsx from "clsx";
 
 type Variant =
@@ -9,6 +9,7 @@ type Variant =
   | "subheading-one"
   | "subheading-two"
   | "subheading-three"
+  | "subheading-four"
   | "body-one"
   | "body-two"
   | "body-three"
@@ -28,6 +29,8 @@ const variants: Record<Variant, string> = {
     "text-[28px] font-semibold leading-[30px] text-raisin-black",
   "subheading-three":
     "text-[28px] font-semibold leading-[42px] text-raisin-black",
+  "subheading-four":
+    "text-[1rem] font-semibold leading-[18px] text-raisin-black",
   "body-one": "text-[28px] leading-[42px] text-raisin-black",
   "body-two": "text-[28px] leading-[30px] text-raisin-black",
   "body-three": "text-[28px] text-raisin-black",
@@ -50,9 +53,7 @@ const Text = ({
   className,
   ...props
 }: TextProps) => {
-  return <p className={clsx(variants[variant], className)}>
-  {children}
-  </p>;
+  return <p className={clsx(variants[variant], className)}>{children}</p>;
 };
 
 export default Text;

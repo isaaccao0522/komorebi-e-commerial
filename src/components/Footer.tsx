@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="flex justify-between items-center">
           {/* LEFT */}
           <div>
-            <Text variant="caption-four" className="text-white">
+            <Text variant="caption-four" className="text-white text-[1rem]">
               Do not sell my personal information <br /> © 2023 KOMOREBI
             </Text>
           </div>
